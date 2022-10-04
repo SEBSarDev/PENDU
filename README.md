@@ -1,4 +1,2 @@
-# PENDU
-My first program in C language, a little hangman game that draw directly in terminal.
-
-There are many dictionaries for play with themes.
+# Pendu-pret-a-jouer
+pendu thématique en C prêt à jouer. Se joue dans un terminal. Thème proposé : harry potter, kaamelott, art, divers. possibilité d'enrichir les dictionnaires.
