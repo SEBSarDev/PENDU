@@ -18,6 +18,8 @@ int main(int argc, char *argv[])
 		int echec = 0;
 		int congrate = 0;
 		printf("Bienvenue dans le jeu du pendu!\n");
+	char c;
+		scanf("%c",&c);
 		char word[100];
 		for(int i =0; i<strlen(word); i++)
 		{
@@ -56,14 +58,16 @@ int main(int argc, char *argv[])
 			saisir(word, motCache,longueurMot, &echec, &congrate);
 		}
 	}
+	return (0);
 }	
 int choseTheme(int *theme)
 {
 	printf("Veuillez choisir le theme du jeu:\n1 = Grand dictionnaire hasardeux\n2 = Harry Potter\n3 = Kaamelott\n4 = Arts\n");
 	scanf("%d",theme);
+	return (0);
 }
 
-char chooseWord(char *word, int theme)
+void chooseWord(char *word, int theme)
 {
 	FILE* dico = NULL;
 	int caractereActuel = 0;
@@ -130,6 +134,7 @@ int saisir(char *mot, char *cache, int longueurMot, int *echec, int *congrate)
 	{
 		perd(cache, echec);
 	}
+	return (0);
 }
 
 int perd(char *motCache, int *echec)
@@ -141,6 +146,7 @@ int perd(char *motCache, int *echec)
 		printf("Il n'y a pas cette lettre dans le mot... \n\n");
 		printf("\n\tVoici le mot a trouver:\n\n\t%s\n\n",motCache);
 	}
+	return (0);
 }
 int gagne(int longueurMot, char lettre, char *mot, char *motCache, int *congrate, int *echec)
 {
@@ -161,6 +167,7 @@ int gagne(int longueurMot, char lettre, char *mot, char *motCache, int *congrate
 		*congrate = 1;
 		printf("Felicitation, vous avez trouve le mot!\n\n\n");
 	}
+	return (0);
 }
 int start(int *beginPart)
 {
@@ -171,13 +178,14 @@ int start(int *beginPart)
 		printf("Au revoir!\n\n");
 		exit(0);
 	}
+	return (0);
 }
 
 char lireCaractere()
 {
 	char caractere =0;
-	scanf("%d",caractere);
-	caractere = getchar();
+	scanf("%c",&caractere);
+//	caractere = getchar();
 	caractere = toupper(caractere);
 	while(getchar() != '\n');
 	return caractere;
@@ -227,6 +235,7 @@ int dessin(int *echec)
 	default:
 	printf("error");
 	break;
-	} 
+	}
+	return (0);
 }
 
